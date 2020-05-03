@@ -1,7 +1,8 @@
-# How to use Qt in Windows with gstreamer
-This repository contains scripts and documentation to build qtmultimedia support with gstreamer on windows 10 and Visual Studio 2017/19
+# How to use Qt in Windows with gstreamer, especially to display rtsp streams
+This repository contains scripts, simple sample programs and documentation to build qtmultimedia support with gstreamer on windows 10 and Visual Studio 2017/19.
+Additonally a simple test program is provided , which shows an publicly available(at the time of this writing)  rtsp stream inside a qml application.
 
-Note that I only did this for the 64 bit version of Qt and gstreamer on 64 bitWindows 10.
+Note that I only did this for the 64 bit version of Qt and gstreamer on Windows 10.
 
 ## Prerequisite
 
