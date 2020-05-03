@@ -27,5 +27,19 @@ See also https://www.youtube.com/watch?v=_JZNCypATOY
 
 ## Build and run a video test application using rtsp url.
 
+1. execute ````setupqtbldenv.bat c:\Qt\5.15.0```` or where you have qt installed. (You can also give the full path to the qt bin directory as parameter)
+2. ````cd videotst````
+2. ````qmake````
+2. ````jom```` or ````nmake````
+2. ````release\videotst```` 
+
+Now the rtsp stream rtsp://170.93.143.139/rtplive/470011e600ef003a004ee33696235daa showing a highway will be displayed.
 
 
+### Bonus: creating your own rtsp stream from your notebook webcam
+
+1. download and unzip http://www.happytimesoft.com/downloads/happytime-rtsp-server-x64.zip
+2. start rtspserver.exe in the unzipped directory
+3. copy the url shown below "stream from camera device." in the appearing dos box.
+4. I had to add 1 to the end of the url (making it videodevice1), when setting it as source property in the Video element in main.qml.
+5. After a rebuild with nmake or jom, start ````release\videotst```` and you will hopefully see yourself ;-).
