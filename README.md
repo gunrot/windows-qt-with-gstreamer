@@ -23,8 +23,11 @@ See also https://www.youtube.com/watch?v=_JZNCypATOY
 3. cd into the repository directory
 4. clone the qtmultimedia repository
   * ```` git clone http://code.qt.io/qt/qtmultimedia.git ````
+  * ```` cd qtmultimedia````
   * ```` git checkout <version> ````  *\<version\>*  should match the qt version, you have installed.
-5. execute ````bld_qtmultimedia.bat```` ( you could give an alternative install directory as parameter without the volume, for example ````bld_qtmultimedia.bat \Users\<myuser>\qtmultimedia```` to get a add-on installtion, which you can copy onto other Qt installations of the same type and version ) 
+  * ```` cd .. ```` 
+  
+5. execute ````bld_qtmultimedia.bat <qt_install_dir> [<installdir>]}```` ( you can give an alternative install directory as second parameter without the volume, for example ````bld_qtmultimedia.bat C:\Qt\5.15.0 \Users\<myuser>\qtmultimedia```` to get a add-on installtion, which you can copy onto other Qt installations of the same type and version ) 
 
 ## Build and run a video test application using rtsp url.
 
