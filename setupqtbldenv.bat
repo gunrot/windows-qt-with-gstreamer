@@ -8,14 +8,15 @@ set QTDIR=%1
 
 
 call %~dp0setcompilerenv.bat -arch=x64 -host_arch=x64
-if not defined GSTREAMER_1_0_ROOT_X86_64 (
- echo gstreamer 1.0 64 bit is not installed.
+if not defined GSTREAMER_1_0_ROOT_MSVC_X86_64 (
+ echo gstreamer 1.0 64 bit for msvc is not installed.
  echo Download the following packages and install them.
- echo https://gstreamer.freedesktop.org/data/pkg/windows/1.16.2/gstreamer-1.0-msvc-x86_64-1.16.2.msi
- echo https://gstreamer.freedesktop.org/data/pkg/windows/1.16.2/gstreamer-1.0-devel-msvc-x86_64-1.16.2.msi
+ echo https://gstreamer.freedesktop.org/data/pkg/windows/1.18.0/msvc/gstreamer-1.0-msvc-x86_64-1.18.0.msi	
+ echo https://gstreamer.freedesktop.org/data/pkg/windows/1.18.0/msvc/gstreamer-1.0-devel-msvc-x86_64-1.18.0.msi
+
  exit /b 1
 )
-set gstbin=%GSTREAMER_1_0_ROOT_X86_64%\bin
+set gstbin=%GSTREAMER_1_0_ROOT_MSVC_X86_64%\bin
 echo %path%|find /i "%gstbin:"=%">nul  || set path=%gstbin%;%path%
 
 

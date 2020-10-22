@@ -7,10 +7,10 @@ Note that I only did this for the 64 bit version of Qt and gstreamer on Windows 
 ## Prerequisite
 
 1. Install Visual Studio 2017 or 2019 (recommended). Community version is sufficient.
-2. Install Qt for windows >= 5.13 (my tests were made with Qt 5.15.0 beta4) for your Visual Studio  version
+2. Install Qt for windows >= 5.13 (my tests were made with Qt 5.15.0) for your Visual Studio  version
 3. Install gstreamer-1.0 packages for windows and msvc.
-  *  https://gstreamer.freedesktop.org/data/pkg/windows/1.16.2/gstreamer-1.0-msvc-x86_64-1.16.2.msi
-  *  https://gstreamer.freedesktop.org/data/pkg/windows/1.16.2/gstreamer-1.0-devel-msvc-x86_64-1.16.2.msi
+  *  https://gstreamer.freedesktop.org/data/pkg/windows/1.18.0/msvc/gstreamer-1.0-msvc-x86_64-1.18.0.msi	
+  *  https://gstreamer.freedesktop.org/data/pkg/windows/1.18.0/msvc/gstreamer-1.0-devel-msvc-x86_64-1.18.0.msi
 
 Note that Windows 10 will probably block the installation, as the msi is unsigned.
 Click on the More info link in the warning box, which appears and press the appearing Run Anyway Button.
@@ -24,14 +24,14 @@ See also https://www.youtube.com/watch?v=_JZNCypATOY
 4. clone the qtmultimedia repository
   * ```` git clone http://code.qt.io/qt/qtmultimedia.git ````
   * ```` cd qtmultimedia````
-  * ```` git checkout <version> ````  *\<version\>*  should match the qt version, you have installed.
+  * ```` git checkout <version> ````  *\<version\>*  should match the qt version tag, you have installed, e.g. v5.15.1
   * ```` cd .. ```` 
   
-5. execute ````bld_qtmultimedia.bat <qt_install_dir> [<installdir>]}```` ( you can give an alternative install directory as second parameter without the volume, for example ````bld_qtmultimedia.bat C:\Qt\5.15.0 \Users\<myuser>\qtmultimedia```` to get a add-on installtion, which you can copy onto other Qt installations of the same type and version ) 
+5. execute ````bld_qtmultimedia.bat <qt_install_dir> [<installdir>]}```` ( you can give an alternative install directory as second parameter without the volume, for example ````bld_qtmultimedia.bat C:\Qt\5.15.0 \Users\<myuser>\qtmultimedia```` to get a add-on installation, which you can copy onto other Qt installations of the same type and version ) 
 
 ## Build and run a video test application using rtsp url.
 
-1. execute ````setupqtbldenv.bat c:\Qt\5.15.0```` or where you have qt installed. (You can also give the full path to the qt bin directory as parameter)
+1. execute ````setupqtbldenv.bat c:\Qt\5.15.1```` or where you have qt installed. (You can also give the full path to the qt bin directory as parameter)
 2. ````cd videotst````
 2. ````qmake````
 2. ````jom```` or ````nmake````

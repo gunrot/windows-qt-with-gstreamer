@@ -1,10 +1,10 @@
 @echo off
 setlocal enableDelayedExpansion
-if not defined GSTREAMER_1_0_ROOT_X86_64 (
-  echo Error:GSTREAMER_1_0_ROOT_X86_64 is not set.
+if not defined GSTREAMER_1_0_ROOT_MSVC_X86_64 (
+  echo Error:GSTREAMER_1_0_ROOT_MSVC_X86_64 is not set.
   exit /b 1
 )
-set gstbin=%GSTREAMER_1_0_ROOT_X86_64%\bin
+set gstbin=%GSTREAMER_1_0_ROOT_MSVC_X86_64%\bin
 @if not defined _echo echo off
 
 
@@ -21,8 +21,8 @@ if %ERRORLEVEL% NEQ 0 (
  exit /b 1
 )
 pushd %~dp0\qtmultimedia
-set INCLUDE=%GSTREAMER_1_0_ROOT_X86_64%\include\gstreamer-1.0;%GSTREAMER_1_0_ROOT_X86_64%\include;%GSTREAMER_1_0_ROOT_X86_64%\include\glib-2.0;%GSTREAMER_1_0_ROOT_X86_64%\lib\glib-2.0\include;%INCLUDE%
-set LIB=%GSTREAMER_1_0_ROOT_X86_64%\lib;%LIB%
+set INCLUDE=%GSTREAMER_1_0_ROOT_MSVC_X86_64%\include\gstreamer-1.0;%GSTREAMER_1_0_ROOT_MSVC_X86_64%\include;%GSTREAMER_1_0_ROOT_MSVC_X86_64%\include\glib-2.0;%GSTREAMER_1_0_ROOT_MSVC_X86_64%\lib\glib-2.0\include;%INCLUDE%
+set LIB=%GSTREAMER_1_0_ROOT_MSVC_X86_64%\lib;%LIB%
 echo "INCLUDE=%INCLUDE%"
 ECHO "LIB=%LIB%
 qmake 
